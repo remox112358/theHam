@@ -1,0 +1,18 @@
+- var target = button.target ? button.target : "_self"
+- var clsx = ['button']
+
+if (button.icon)
+  - clsx = [...clsx, "button--icon"]
+
+mixin buttonInner(btn = {})
+  if (btn.icon)
+    +svg(btn.icon)
+    
+  =btn.text
+
+if (button.link)
+  a(href=button.link, class=clsx, target=target)
+    +buttonInner(button)
+else
+  button(class=clsx)
+    +buttonInner(button)

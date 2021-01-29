@@ -1,0 +1,17 @@
+mixin assets(type, name)
+  if (type === 'css')
+    +style(`/assets/css/${name}${process.env.NODE_ENV === 'production' ? '.min' : ''}.css`)
+  if (type === 'js')
+    +script(`/assets/js/${name}${process.env.NODE_ENV === 'production' ? '.min' : ''}.js`)
+
+mixin style(path, rel = "stylesheet")
+  link( href=path,
+        rel=rel)
+
+mixin script(path, type = "text/javascript")
+  script( src=path
+          type=type)
+
+mixin svg(name, cls)
+  svg(class=`svg${cls ? ' ' + cls : ''} svg--${name}`)
+    use(xlink:href=`/assets/img/icons.svg#${name}`)

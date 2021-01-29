@@ -1,0 +1,26 @@
+block variables
+  
+include ../includes/mixins/index
+
+doctype
+html(lang="hy-AM")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title= docTitle
+
+    +style('https://fonts.gstatic.com', 'preconnect')
+    +style('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap')
+    +assets('css', 'style')
+  
+    block headerStyles
+
+    block headerScripts
+  body
+
+    block content
+
+    +assets('js', 'script')
+    
+    block footerScripts

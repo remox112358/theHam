@@ -1,0 +1,22 @@
+extends layouts/main
+
+block variables
+  - docTitle = "Gulp - get started"
+
+block content
+  .content
+    img(src="/assets/img/logo.png", alt="Gulp lgo")
+
+    h1 Get started with gulp
+    p
+      i Edit src/index.pug to chnage this content
+
+    +button({
+      target: "_blank",
+      icon: 'icon-document',
+      text: 'Documentation',
+      link: 'https://pugjs.org/api/getting-started.html',
+    })
+
+    footer Powered by 
+      a(href="//sky-tech.org", target="_blank") SkyTech studio
