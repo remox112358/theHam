@@ -1,63 +1,10 @@
+// Main
 @import _variables
+@import _global
 
-body
-  display: flex
-  align-items: center
-  justify-content: center
+// Parts
+@import ../../includes/header/style
 
-  height: 100vh
-
-  margin: 0
-  padding: 0
-
-  background: #12c2e9
-  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9) 
-  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9)
-
-  font-family: 'Fira Code', monospace
-
-.svg
-  display: inline-block
-
-  width: 25px
-  height: 25px
-
-  color: inherit
-
-  vertical-align: middle
-
-.content
-  color: white
-  text-align: center
-
-  img
-    width: 250px
-
-    background: white
-    border-radius: 50%
-    
-  h1
-    text-transform: uppercase
-  
-  a
-    align-items: center
-    display: inline-flex
-    justify-content: center
-
-    svg
-      margin-right: 10px
-
-footer
-  right: 0
-  bottom: 0
-  position: fixed
-
-  padding: 10px
-
-  font-size: 12px
-
-  a
-    color: #0c6680
-    text-decoration: none
-
+// Components
 @import ../../includes/components/button/style
+@import ../../includes/components/menu/style

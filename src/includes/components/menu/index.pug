@@ -1,0 +1,17 @@
+- var clsx = ['menu']
+
+if (menu.class)
+  - clsx = [...clsx, menu.class]
+
+if (menu.items)
+  - menuItems = [...menuItems]
+
+ul(class=clsx)
+  if (menu.items)
+    each item, index in menu.items
+      if (index === 0)
+        li.menu__item.active
+          a.menu__link(href=item.url)= item.text
+      else
+        li.menu__item
+          a.menu__link(href=item.url)= item.text

@@ -3,7 +3,7 @@ block variables
 include ../includes/mixins/index
 
 doctype
-html(lang="hy-AM")
+html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -11,7 +11,8 @@ html(lang="hy-AM")
     title= docTitle
 
     +style('https://fonts.gstatic.com', 'preconnect')
-    +style('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap')
+    +style('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap')
+    +style('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', 'stylesheet', 'sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', 'anonymous')
     +assets('css', 'style')
   
     block headerStyles

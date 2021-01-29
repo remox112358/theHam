@@ -1,0 +1,43 @@
+.menu
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+  list-style: none
+
+  margin: 0
+  padding: 0
+
+  &__item
+    box-sizing: content-box
+
+    .menu__link
+      transition: color $transition--text
+
+      &:hover
+        color: $color--primary
+
+  &--header
+    font-size: 13px
+    font-weight: bold
+
+    text-transform: uppercase
+
+    color: #b8b8b8
+
+    .menu__item
+      display: flex
+      align-items: center
+
+      margin-right: 15px
+
+      height: 100%
+
+      &.active
+        color: $color--primary
+
+        border-bottom: 2px solid $color--primary
+
+      &:last-child
+        margin-right: 0
