@@ -1,0 +1,40 @@
+.section--features
+  padding: 80px 0 20px 0px
+
+  .row--features
+    margin-left: -35px
+    margin-right: -35px
+
+    .col--feature
+      padding-left: 35px
+      padding-right: 35px
+
+    .feature
+      margin-bottom: 60px
+
+      &__title
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        font-size: 18px
+        font-weight: bold
+        text-transform: capitalize
+
+        cursor: pointer
+
+        transition: color $transition--text
+
+        &:hover
+          color: $color--primary
+
+        .icon
+          color: $color--primary
+
+          margin-right: 15px
+
+      &__text
+        font-size: 14px
+        font-weight: 300
+
+        margin-top: 15px

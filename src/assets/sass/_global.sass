@@ -8,7 +8,43 @@ body
   font-style: normal
 
   color: $color--text
-  background-color: #3c3c3c
+
+.section
+  padding: 80px 0
+
+  &__heading
+    position: relative
+
+    font-size: 36px
+    text-align: center
+    text-transform: capitalize
+
+    margin-bottom: 110px
+    
+    color: #4e4e4e
+
+    &::before,
+    &::after
+      content: ''
+
+      position: absolute
+
+      width: 75px
+      height: 1px
+
+      background-color: $color--primary
+
+    &::before
+      bottom: -30px
+      left: calc(50% - 10px)
+
+      transform: translateX(-50%)
+
+    &::after
+      bottom: -35px
+      left: 50%
+
+      transform: translateX(-50%)
 
 h1, h2, h3,
 h4, h5, h6
