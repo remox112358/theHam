@@ -1,32 +1,46 @@
 .button
   position: relative
 
-  display: inline-block
+  display: flex
+  align-items: center
+  justify-content: center
 
-  height: 40px
-  min-width: 160px
+  height: 60px
+  min-width: 165px
 
   padding-left: 10px
   padding-right: 10px
 
-  border: 1px solid white
   outline: none !important
-  background-color: transparent
 
-  color: white
-  font-size: 18px
+  color: #fff
+  background-color: $color--primary
+
   cursor: pointer
-  line-height: 40px
-  text-align: center
-  text-decoration: none
+
+  font-size: 13px
+  font-weight: bold
   text-transform: uppercase
+
+  border-radius: 4px
 
   overflow: hidden
   vertical-align: middle
 
-  transition: background-color .25s, color .3s
+  transition: background-color $transition--button
 
   &:hover
-    background-color: white
+    background-color: darken($color--primary, 10%)
 
-    color: black
+  &--link
+    &:hover
+      color: #fff
+
+  &--head
+    border-top: 5px solid #fff
+
+  &--skyblue
+    background-color: $color--skyblue
+
+    &:hover
+      background-color: darken($color--skyblue, 10%)

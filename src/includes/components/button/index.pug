@@ -1,8 +1,14 @@
-- var target = button.target ? button.target : "_self"
+- var target = button.target ? button.target : '_self'
 - var clsx = ['button']
 
+if (button.class)
+  - clsx = [...clsx, button.class]
+
 if (button.icon)
-  - clsx = [...clsx, "button--icon"]
+  - clsx = [...clsx, 'button--icon']
+
+if (button.link)
+  - clsx = [...clsx, 'button--link']
 
 mixin buttonInner(btn = {})
   if (btn.icon)
