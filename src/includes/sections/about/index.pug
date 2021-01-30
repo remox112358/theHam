@@ -1,0 +1,55 @@
+- 
+  var skills = [
+    {
+      id: 'skill-ui',
+      name: 'User interface'
+    },
+    {
+      id: 'skill-wd',
+      name: 'Web design'
+    },
+    {
+      id: 'skill-wp',
+      name: 'Wordpress'
+    },
+    {
+      id: 'skill-hc',
+      name: 'Html & css'
+    },
+    {
+      id: 'skill-ad',
+      name: 'App design'
+    }
+  ]
+
+section.section.section--about.section--dark
+  .container
+    h2.section__heading About our company
+    .section__inner
+      .row.justify-content-center.no-gutters
+        .about
+          ul.tabs.tabs--about(id="tabs-about")
+            li.tab(id="tab-history", data-href="#history") Our history
+            li.tab(id="tab-biography", data-href="#biography") Our biography
+            li.tab.active(id="tab-skills", data-href="#skills") Our skills
+          .about__content
+            .area.area--history(id="history")
+              p.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              .row.row--advantages.justify-content-between.mt-4
+                each i in [1, 2, 3, 4, 5, 6, 7, 8]
+                  .col-6.col--advantage
+                    .advantage
+                      +icon('checked')
+                      span.advantage__text Excepteur sint occaecat sint.
+            .area.area--biography(id="biography")
+              p.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum Suspendisse cursus malesuada facilisis. Nunc con sectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu lum nec odio ipsum. Sus pendisse cursus malesua da facilisis. Vestibulum nec odio ipsum. 
+              p.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum Suspendisse cursus malesuada facilisis. Nunc con sectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .area.area--skills.active(id="skills")
+              each skill in skills
+                .skill(id=skill.id)
+                  .skill__bar
+                  .skill__name #{skill.name}
