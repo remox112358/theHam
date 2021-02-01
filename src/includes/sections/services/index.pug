@@ -1,0 +1,22 @@
+section.section.section--services
+  .container
+    h2.section__heading Our services
+    .section__inner
+      .services
+        ul.tabs.tabs--services(id="tabs-services")
+          li.tab.active(id="tab-wd", data-href="#wd") Web design
+          li.tab(id="tab-gd", data-href="#gd") Graphic design
+          li.tab(id="tab-os", data-href="#os") Online support
+          li.tab(id="tab-ad", data-href="#ad") App design
+          li.tab(id="tab-om", data-href="#om") Online marketing
+          li.tab(id="tab-ss", data-href="#ss") Seo service
+        .services__content
+          each areaID, index in ['wd', 'gd', 'os', 'ad', 'om', 'ss']
+            - var areaClass = index === 0 ? 'active' : false;
+            .area(id=areaID, class=areaClass)
+              .area__thumbnail
+                img(src="/assets/img/work.jpg", alt="Work")
+              p.area__text.
+                #{'#' + (index + 1)} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            
+          

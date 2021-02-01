@@ -63,6 +63,18 @@ jQuery(($) => {
       event.preventDefault();
     });
 
+    $('#tabs-services .tab').click(function(event) {
+      if (! $(this).hasClass('active')) {
+        $('#tabs-services .tab').removeClass('active');
+        $(this).addClass('active');
+
+        $('.services .area').removeClass('active');
+        $(`${$(this).attr('data-href')}`).addClass('active');
+      }
+
+      event.preventDefault();
+    });
+
   })
 
 
