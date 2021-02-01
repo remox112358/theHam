@@ -1,0 +1,18 @@
+- var clsx = ['post']
+
+if (post.class)
+  - clsx = [...clsx, post.class]
+
+div(class=clsx)
+  a(href="/")
+    .post__thumbnail
+      img(src=post.thumbnail, alt=post.title)
+    .post__content
+      h6.post__title Amazing image post
+      .post__info
+        span By #{post.author}
+        span |
+        span #{post.commentsCount} comment
+    .post__date
+      span 12
+      span Feb

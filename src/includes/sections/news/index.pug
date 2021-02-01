@@ -1,0 +1,13 @@
+section.section.section--news
+  .container
+    h2.section__heading Breaking news
+    .section__inner
+      .row
+        each i in Array(8)
+          .col-3
+            +post({
+              title: 'Amazing image post',
+              thumbnail: '/assets/img/work.jpg',
+              author: 'admin',
+              commentsCount: 2
+            })
