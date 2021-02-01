@@ -1,0 +1,9 @@
+- var clsx = ['filters']
+
+if (filters.class)
+  - clsx = [...clsx, filters.class]
+
+div(class=clsx)
+  if (filters.items)
+    each item in filters.items
+      .filter(class=item.class)= item.text

@@ -1,0 +1,15 @@
+- var clsx = ['work']
+
+if (work.class)
+  - clsx = [...clsx, work.class]
+
+div(class=clsx)
+  img(src=work.image, alt=work.title)
+  .overlay
+    .work__buttons
+      a.button(href=work.links[0])
+        +icon('link')
+      a.button(href=work.links[1])
+        +icon('search')
+    h5.work__title= work.title
+    span.work__subtitle= work.subtitle

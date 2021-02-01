@@ -1,0 +1,42 @@
+section.section.section--work
+  .container
+    h2.section__heading Our amazing work
+    .section__inner
+      +filters({
+        class: 'filters--work',
+        items: [
+          {
+            text: 'All',
+            class: 'active'
+          },
+          {
+            text: 'Graphic design'
+          },
+          {
+            text: 'Web design'
+          },
+          {
+            text: 'Landing pages'
+          },
+          {
+            text: 'Wordpress'
+          },
+        ]
+      })
+      .works
+        .row.no-gutters
+          each i in Array(12)
+            .col-3
+              +work({
+                title: 'Creative design',
+                subtitle: 'Web design',
+                links: ['/', '/'],
+                image: '/assets/img/work.jpg'
+              })
+      .row.justify-content-center.mt-5
+        .col-auto
+          +button({
+            text: 'Load more',
+            link: '/',
+            icon: 'add'
+          })
