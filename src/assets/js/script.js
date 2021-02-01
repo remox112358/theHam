@@ -33,6 +33,24 @@ jQuery(($) => {
 
     skillsEffect();
 
+    $(document).on('click', '.filters--work .filter', function() {
+      var siblings = $(this).siblings();
+
+      $.map(siblings, (sibling) => {
+        $(sibling).removeClass('active');
+      });
+
+      $(this).addClass('active');
+
+      $('#works').isotope({
+        filter: $(this).attr('data-filter')
+      });
+    });
+
+    $('#works').isotope({
+      filter: '*'
+    });
+
     $('#tabs-about .tab').click(function(event) {
       if (! $(this).hasClass('active')) {
         $('#tabs-about .tab').removeClass('active');
@@ -43,7 +61,7 @@ jQuery(($) => {
       }
 
       event.preventDefault();
-    })
+    });
 
   })
 

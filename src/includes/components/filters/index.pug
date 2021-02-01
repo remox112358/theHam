@@ -6,4 +6,4 @@ if (filters.class)
 div(class=clsx)
   if (filters.items)
     each item in filters.items
-      .filter(class=item.class)= item.text
+      .filter(class=item.class, data-filter=item.dataFilter)= item.text
