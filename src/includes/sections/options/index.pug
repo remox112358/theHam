@@ -3,22 +3,20 @@
     {
       icon: 'click',
       text: 'Different theme option',
-      class: 'option option--dark'
+      class: 'option--dark'
     },
     {
       icon: 'diamond',
-      text: 'Fully customizable',
-      class: 'option'
+      text: 'Fully customizable'
     },
     {
       icon: 'lamp',
       text: 'Unlimited support',
-      class: 'option option--dark'
+      class: 'option--dark'
     },
     {
       icon: 'devices',
-      text: 'Responsive all device',
-      class: 'option'
+      text: 'Responsive all device'
     }
   ]
 
@@ -26,6 +24,8 @@ section.section.section--options
   .row.no-gutters
     each option in options
       .col-3
-        div(class=option.class)
-          +icon(option.icon)
-          span.option__text= option.text
+        +option({
+          class: option.class,
+          icon: option.icon,
+          text: option.text
+        })

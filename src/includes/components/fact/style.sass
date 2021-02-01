@@ -1,0 +1,71 @@
+.fact
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  height: 375px
+
+  background-color: $color--primary
+
+  line-height: 1
+
+  border-top: 7px solid #25333c
+
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 165px
+    height: 165px
+
+    border: 2px solid #25333c
+    border-radius: 50%
+
+    .inner
+      display: flex
+      align-items: center
+      justify-content: center
+
+      width: 110px
+      height: 110px
+
+      border-radius: 50%
+
+      background-color: #25333c
+
+      .icon
+        width: 40px
+        height: 40px
+
+        color: #fff
+
+  &__count
+    font-size: 36px
+
+    margin-top: 20px
+
+    color: #fff
+
+  &__name
+    margin-top: 15px
+
+    color: #25333c
+
+    font-size: 18px
+    font-weight: 300 
+
+  &--dark
+    border-top: 7px solid $color--primary
+
+    background-color: #25333c
+
+    .fact__icon
+      border-color: $color--primary
+
+      .inner
+        background-color: $color--primary
+
+    .fact__name
+      color: $color--primary

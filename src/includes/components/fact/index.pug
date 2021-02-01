@@ -1,0 +1,11 @@
+- var clsx = ['fact']
+
+if (fact.class)
+  - clsx = [...clsx, fact.class]
+
+div(class=clsx)
+  .fact__icon
+    .inner
+      +icon(fact.icon)
+  span.fact__count= fact.count
+  span.fact__name= fact.name

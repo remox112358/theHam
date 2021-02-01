@@ -1,0 +1,8 @@
+- var clsx = ['option']
+
+if (option.class)
+  - clsx = [...clsx, option.class]
+
+div(class=clsx)
+  +icon(option.icon)
+  span.option__text= option.text

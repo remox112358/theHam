@@ -1,0 +1,36 @@
+- 
+  var facts = [
+    {
+      icon: 'case',
+      count: 4609,
+      name: 'Works',
+      class: 'fact--dark'
+    },
+    {
+      icon: 'user',
+      count: 3470,
+      name: 'Customers'
+    },
+    {
+      icon: 'shop',
+      count: 2908,
+      name: 'Purchase',
+      class: 'fact--dark'
+    },
+    {
+      icon: 'location',
+      count: 1908,
+      name: 'Office'
+    }
+  ]
+
+section.section.section--facts
+  .row.no-gutters
+    each fact in facts
+      .col-3
+        +fact({
+          icon: fact.icon,
+          count: fact.count,
+          name: fact.name,
+          class: fact.class
+        })
