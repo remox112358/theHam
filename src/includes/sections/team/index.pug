@@ -1,0 +1,104 @@
+-
+  var members = [
+    {
+      name: 'Al Masum',
+      specialization: 'Founder',
+      image: '/assets/img/work.jpg',
+      links: [
+        {
+          icon: 'facebook',
+          url: '/'
+        },
+        {
+          icon: 'twitter',
+          url: '/'
+        },
+        {
+          icon: 'skype',
+          url: '/'
+        },
+        {
+          icon: 'vine',
+          url: '/'
+        }
+      ]
+    },
+    {
+      name: 'Mis Liza',
+      specialization: 'UX Designer',
+      image: '/assets/img/work.jpg',
+      links: [
+        {
+          icon: 'facebook',
+          url: '/'
+        },
+        {
+          icon: 'twitter',
+          url: '/'
+        },
+        {
+          icon: 'skype',
+          url: '/'
+        },
+        {
+          icon: 'vine',
+          url: '/'
+        }
+      ]
+    },
+    {
+      name: 'Hasan Mahmud',
+      specialization: 'Web Designer',
+      image: '/assets/img/work.jpg',
+      links: [
+        {
+          icon: 'facebook',
+          url: '/'
+        },
+        {
+          icon: 'twitter',
+          url: '/'
+        },
+        {
+          icon: 'skype',
+          url: '/'
+        },
+        {
+          icon: 'vine',
+          url: '/'
+        }
+      ]
+    },
+    {
+      name: 'Afifa Jannat',
+      specialization: 'Web Designer',
+      image: '/assets/img/work.jpg',
+      links: [
+        {
+          icon: 'facebook',
+          url: '/'
+        },
+        {
+          icon: 'twitter',
+          url: '/'
+        },
+        {
+          icon: 'skype',
+          url: '/'
+        },
+        {
+          icon: 'vine',
+          url: '/'
+        }
+      ]
+    }
+  ]
+
+section.section.section--team
+  .container
+    h2.section__heading Meet our team
+    .section__inner
+      .row
+        each member in members
+          .col-3
+            +member(member)
