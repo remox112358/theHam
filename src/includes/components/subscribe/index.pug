@@ -1,0 +1,37 @@
+- var clsx = ['subscribe']
+
+if (subscribe.offer)
+  - clsx = [...clsx, 'subscribe--offer']
+
+if (subscribe.class)
+  - clsx = [...clsx, subscribe.class]
+
+div(class=clsx)
+  .subscribe__name
+    span= subscribe.name
+  .subscribe__price
+    span $#{subscribe.price}
+    span /Month
+  .subscribe__details
+    .detail
+      span #{subscribe.details.hosting} Hosting
+    .detail
+      span #{subscribe.details.emailMarketing} Email Marketing
+    .detail
+      span #{subscribe.details.database} Database
+    .detail
+      span #{subscribe.details.designPack} Design Pack
+    .detail
+      span #{subscribe.details.websiteLayouts} Website Layouts
+    .detail
+      span #{subscribe.details.headerStyle} Header Style
+    .detail
+      span #{subscribe.details.onlineStore} Online Store
+  .subscribe__purchase
+    +button({
+      text: 'buy now',
+      link: subscribe.link,
+      class: subscribe.offer ? '' : 'button--darkblue'
+    })
+  if (subscribe.offer)
+    .offer Offer

@@ -1,0 +1,74 @@
+- 
+  var subscribes = [
+    {
+      name: "Personal",
+      price: 99,
+      offer: false,
+      details: {
+        hosting: 1,
+        emailMarketing: 2,
+        database: 5,
+        designPack: 2,
+        websiteLayouts: 3,
+        headerStyle: 5,
+        onlineStore: 3
+      },
+      link: '/'
+    },
+    {
+      name: "Business",
+      price: 199,
+      offer: false,
+      details: {
+        hosting: 1,
+        emailMarketing: 2,
+        database: 5,
+        designPack: 2,
+        websiteLayouts: 3,
+        headerStyle: 5,
+        onlineStore: 3
+      },
+      link: '/'
+    },
+    {
+      name: "Professional",
+      price: 299,
+      offer: true,
+      details: {
+        hosting: 1,
+        emailMarketing: 2,
+        database: 5,
+        designPack: 2,
+        websiteLayouts: 3,
+        headerStyle: 5,
+        onlineStore: 3
+      },
+      link: '/'
+    },
+    {
+      name: "Diamond",
+      price: 499,
+      offer: false,
+      details: {
+        hosting: 1,
+        emailMarketing: 2,
+        database: 5,
+        designPack: 2,
+        websiteLayouts: 3,
+        headerStyle: 5,
+        onlineStore: 3
+      },
+      link: '/'
+    }
+  ]
+
+
+section.section.section--pricing
+  .container
+    h2.section__heading Out pricing table
+    .section__inner
+      .row.no-gutters
+        each subscribe in subscribes
+          .col-3
+            +subscribe(subscribe)
+        
