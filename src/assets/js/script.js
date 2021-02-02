@@ -75,6 +75,22 @@ jQuery(($) => {
       event.preventDefault();
     });
 
+    $('#slider-feedbacks').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      prevArrow: $('.slider--feedbacks .prev'),
+      nextArrow: $('.slider--feedbacks .next'),
+      appendDots: $('.slider__tools .slider__dots'),
+      customPaging: (slider, index) => {
+        let src = $(slider.$slides[index]).find('.author__thumbnail img').attr('src'),
+            alt = $(slider.$slider[index]).find('.author__name').text();
+
+        return `<img src="${src}" alt="${alt}" />`;
+      }
+    });
+
   })
 
 

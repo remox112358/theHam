@@ -1,0 +1,66 @@
+.feedback
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  text-align: center
+
+  color: #bbbbbb
+
+  .icon
+    color: $color--primary
+
+    width: 50px
+    height: 50px
+
+    margin-bottom: 40px
+
+  &__text
+    font-size: 16px
+    font-weight: 300
+
+    min-height: 50px
+
+    margin: 0 0 40px 0
+
+  &__author
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .author__name
+      font-size: 16px
+      font-weight: bold
+      text-transform: uppercase
+
+      color: $color--primary
+
+      margin-bottom: 5px
+    
+    .author__specialization
+      font-size: 13px
+      font-weight: 300
+
+      margin-bottom: 25px
+
+    .author__thumbnail
+      width: 140px
+      height: 140px
+
+      border: 3px solid $color--primary
+      border-radius: 50%
+
+      box-shadow: 0px 0px 0px 10px #2b5f62
+
+      margin: 10px
+
+      img
+        width: 100%
+        height: 100%
+
+        object-fit: cover
+        object-position: center
+
+        overflow: hidden
+
+        border-radius: 50%
