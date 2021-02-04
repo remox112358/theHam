@@ -1,0 +1,76 @@
+footer.footer
+  .footer__top
+    .container
+      .row.row--footer
+        .col-auto.col--footer
+          span.footer__logo the<span>Ham</span>
+          p.footer__description Lorem ipsum dolor sit amet, con is sectetur adipiscing elit. Duis ut lob ortis nulla. Vestibulum ante ipsum primis itrices posuere cubilia.
+          .footer__info
+            .item
+              span.item__key Office: <br>
+              span.item__value 795 Folsom Ave, Suite 600 <br>
+              span.item__value San Francisco, CA 94107
+            .item
+              span.item__key Phone:
+              span.item__value (91) 8547 632521
+            .item
+              span.item__key Fax:
+              span.item__value (91) 11 4752 1433
+            .item
+              span.item__key Email:
+              span.item__value info@canvas.com
+        .col-auto.col--footer
+          h6.footer__heading Recent post
+          .footer__posts
+            a(href="/")
+              +post({
+                title: 'A standart image post',
+                excerpt: 'Lorem ipsum dolor sit amet, con secteur adip is lisicing elit, sed do.',
+                thumbnail: '/assets/img/work.jpg',
+                date: '10 March, 2015',
+                type: 'small'
+              })
+            hr
+            a(href="/")
+              +post({
+                title: 'A standart image post',
+                excerpt: 'Lorem ipsum dolor sit amet, con secteur adip is lisicing elit, sed do.',
+                thumbnail: '/assets/img/work.jpg',
+                date: '10 March, 2015',
+                type: 'small'
+              })
+            hr
+            a(href="/")
+              +post({
+                title: 'A standart image post',
+                excerpt: 'Lorem ipsum dolor sit amet, con secteur adip is lisicing elit, sed do.',
+                thumbnail: '/assets/img/work.jpg',
+                date: '10 March, 2015',
+                type: 'small'
+              })
+        .col-auto.col--footer
+          h6.footer__heading Tags
+          .footer__tags
+            each i in Array(4)
+              a(href="/")
+                .tag audio
+              a(href="/")
+                .tag gallery
+              a(href="/")
+                .tag image
+          hr
+          h6.footer__heading Newsletter
+          p Subscribe to Our Newsletter to get Important News, Amazing Offers.
+          form.newsletter(action="/", method="POST")
+            input(type="text", name="newsletter_email", placeholder="Enter email" required)
+            button(type="submit") Go
+        .col-auto.col--footer
+          h6.footer__heading Flicke feed
+          .footer__feeds
+            each i in Array(6)
+              a(href="/")
+                .feed
+                  img(src="./assets/img/work.jpg", alt="Work")
+  .footer__bottom
+    .container
+      .copyright Copyright 2021 <a href="/" style="color: #18cfab;">theHam</a> | All Rights Reserved

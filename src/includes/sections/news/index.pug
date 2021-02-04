@@ -5,9 +5,10 @@ section.section.section--news
       .row
         each i in Array(8)
           .col-3
-            +post({
-              title: 'Amazing image post',
-              thumbnail: '/assets/img/work.jpg',
-              author: 'admin',
-              commentsCount: 2
-            })
+            a(href="/")
+              +post({
+                title: 'Amazing image post',
+                thumbnail: '/assets/img/work.jpg',
+                author: 'admin',
+                commentsCount: 2
+              })

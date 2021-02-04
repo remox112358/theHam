@@ -3,12 +3,22 @@
 if (post.class)
   - clsx = [...clsx, post.class]
 
+if (post.type && post.type === 'small')
+  - clsx = [...clsx, 'post--small']
+
 div(class=clsx)
-  a(href="/")
+  if (post.type && post.type === 'small')
     .post__thumbnail
       img(src=post.thumbnail, alt=post.title)
     .post__content
-      h6.post__title Amazing image post
+      h6.post__title= post.title
+      p.post__excerpt= post.excerpt
+      date.post__date= post.date
+  else
+    .post__thumbnail
+      img(src=post.thumbnail, alt=post.title)
+    .post__content
+      h6.post__title= post.title
       .post__info
         span By #{post.author}
         span |
