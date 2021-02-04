@@ -6,6 +6,10 @@ if (member.class)
 div(class=clsx)
   .member__thumbnail
     img(src=member.image, alt=member.name)
+    .member__action
+      .action
+        .action__inner
+          +icon('add')
   .member__info
     span.member__name= member.name
     span.member__specialization= member.specialization
