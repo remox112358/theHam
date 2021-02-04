@@ -20,5 +20,9 @@ if (button.link)
   a(href=button.link, class=clsx, target=target)
     +buttonInner(button)
 else
-  button(class=clsx)
-    +buttonInner(button)
+  if (button.type)
+    button(class=clsx, type=button.type)
+      +buttonInner(button)
+  else
+    button(class=clsx)
+      +buttonInner(button)

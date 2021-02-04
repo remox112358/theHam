@@ -1,0 +1,19 @@
+section.section.section--contact
+  .section__inner
+    .row
+      .col-6
+        | Map
+      .col-sm-6.col--form
+        h2.section__heading Keep in touch
+        form.contact(action="/", method="POST")
+          .form-group
+            input.form-control(type="text", name="name", placeholder="Name", required)
+          .form-group
+            input.form-control(type="email", name="email", placeholder="Email", required)
+          .form-group
+            textarea.form-control(name="message", rows="7", placeholder="Message")
+          +button({
+            text: 'Send request',
+            class: 'button--foot',
+            type: 'submit'
+          })
