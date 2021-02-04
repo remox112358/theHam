@@ -1,0 +1,27 @@
+.feature
+  &__title
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    font-size: 18px
+    font-weight: bold
+    text-transform: capitalize
+
+    cursor: pointer
+
+    transition: color $transition--text
+
+    &:hover
+      color: $color--primary
+
+    .icon
+      color: $color--primary
+
+      margin-right: 15px
+
+  &__text
+    font-size: 14px
+    font-weight: 300
+
+    margin-top: 15px

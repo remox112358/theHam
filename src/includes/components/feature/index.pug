@@ -1,0 +1,11 @@
+- var clsx = ['feature']
+
+if (feature.class)
+  - clsx = [...clsx, feature.class]
+
+div(class=clsx)
+  h5.feature__title
+    +icon(feature.icon)
+    = feature.title
+  p.feature__text
+    = feature.text

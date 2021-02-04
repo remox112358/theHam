@@ -54,9 +54,8 @@ section.section.section--features
       .row.row--features
         each feature in features
           .col-4.col--feature
-            .feature
-              h5.feature__title
-                +icon(feature.icon) 
-                | #{feature.title}
-              p.feature__text.
-                #{feature.text}
+            +feature({
+              title: feature.title,
+              text: feature.text,
+              icon: feature.icon
+            })

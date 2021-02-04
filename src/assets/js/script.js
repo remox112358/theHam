@@ -65,6 +65,12 @@ jQuery(($) => {
       }
     });
 
+    $('[data-role="activator"]').on('click', function() {
+      var area = $(`${$(this).data('href')}`);
+
+      area.toggleClass('active');
+    });
+
   })
 
 

@@ -50,10 +50,10 @@ header.header
           items: menuItems
         })
       .header__search
-        .search__icon
+        .search__icon(data-role="activator", data-href="#search")
           +icon('search')
-        form(action="/", method="GET").search__form
-          input(type="text", name="search", placeholder="Type and search...").input.input--search
+        form(action="/", method="GET", class="search__form", id="search")
+          input(type="text", class="input input--search", name="search", placeholder="Type and search...")
           button(type="submit")
             +icon('search')
 
