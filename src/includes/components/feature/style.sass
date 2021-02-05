@@ -1,4 +1,15 @@
 .feature
+  @media screen and (max-width: $breakpoint--sm)
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    text-align: center
+
+    max-width: 300px
+
+    margin: 0 auto
+
   &__title
     display: flex
     flex-direction: row
@@ -12,6 +23,15 @@
 
     transition: color $transition--text
 
+    @media screen and (max-width: $breakpoint--lg)
+      font-size: 16px
+
+    @media screen and (max-width: $breakpoint--md)
+      font-size: 18px
+
+    @media screen and (max-width: $breakpoint--sm)
+      font-size: 16px
+
     &:hover
       color: $color--primary
 
@@ -20,8 +40,21 @@
 
       margin-right: 15px
 
+      @media screen and (max-width: $breakpoint--lg)
+        margin-right: 10px
+
   &__text
     font-size: 14px
     font-weight: 300
 
     margin-top: 15px
+
+    @media screen and (max-width: $breakpoint--lg)
+      font-size: 12px
+
+    @media screen and (max-width: $breakpoint--md)
+      font-size: 14px
+
+    @media screen and (max-width: $breakpoint--sm)
+      font-size: 12px
+      
