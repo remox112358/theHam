@@ -7,7 +7,6 @@ window.lazyLoad = () => {
         if (entry.isIntersecting) {
           let lazyImage = entry.target
           lazyImage.src = lazyImage.dataset.src
-          lazyImage.srcset = lazyImage.dataset.srcset
           lazyImage.classList.remove("lazy")
           lazyImage.classList.add("lazy--loaded")
           lazyImageObserver.unobserve(lazyImage)
