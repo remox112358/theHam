@@ -13,6 +13,10 @@
 
       background-color: #294453
 
+    .container
+      padding-left: 0
+      padding-right: 0
+
     .col--footer
       &:nth-child(1)
         flex: 0 0 295px
@@ -23,12 +27,12 @@
         max-width: 390px
 
       &:nth-child(3)
-        flex: 0 0 290px
-        max-width: 290px
+        flex: 0 0 1
+        max-width: 270px
 
       &:nth-child(4)
-        flex: 0 0 165px
-        max-width: 165px
+        flex: 0 0 calc(100% - 295px - 390px - 270px)
+        max-width: calc(100% - 295px - 390px - 270px)
 
     .footer__logo
       font-size: 40px
@@ -140,13 +144,13 @@
       display: flex
       flex-wrap: wrap
 
-      margin: -4px
+      margin: -8px
 
       .feed
-        width: 60px
-        height: 60px
+        width: 75px
+        height: 75px
 
-        margin: 4px
+        margin: 8px
 
         img
           width: 100%
