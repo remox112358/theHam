@@ -68,6 +68,8 @@ jQuery(($) => {
     $('[data-role="activator"]').on('click', function() {
       var area = $(`${$(this).data('href')}`);
 
+      $(this).toggleClass('active');
+
       area.toggleClass('active');
     });
 

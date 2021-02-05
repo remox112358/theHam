@@ -9,8 +9,15 @@
 
   background-color: #44433ecc
 
+  @media screen and (max-width: $breakpoint--sm)
+    height: 90px
+
   &__logo
     max-width: 200px
+
+  &__nav
+    display: flex
+    align-items: center
 
   &__search
     cursor: pointer
@@ -27,6 +34,13 @@
       &:hover
         color: $color--primary
 
+      @media screen and (max-width: $breakpoint--sm)
+        &:hover
+          color: #b8b8b8
+
+      &.active
+        color: $color--primary
+
     .search__form
       display: none
       flex-direction: row
@@ -38,12 +52,23 @@
       right: 0
       bottom: 0
 
-      transform: translateY(100px)
+      transform: translateY(101px)
 
       width: 670px
       height: 54px
 
       background-color: #fff
+
+      @media screen and (max-width: $breakpoint--lg)
+        width: 500px
+
+      @media screen and (max-width: $breakpoint--md)
+        width: 400px
+
+      @media screen and (max-width: $breakpoint--sm)
+        transform: translateY(86px)
+
+        width: 275px
 
       &.active
         display: flex

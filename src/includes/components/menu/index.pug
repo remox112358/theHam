@@ -1,4 +1,5 @@
 - var clsx = ['menu']
+- var mobileClsx = ['menu', 'menu--mobile']
 
 if (menu.class)
   - clsx = [...clsx, menu.class]
@@ -12,3 +13,12 @@ ul(class=clsx)
       else
         li.menu__item
           a.menu__link(href=item.url)= item.text
+
+div(class=mobileClsx)
+  span.burger(data-role="activator", data-href="#mobile-menu")
+    +icon('menu')
+  .dropdown(id="mobile-menu")
+    ul
+      each item in menu.items
+        li
+          a(href=item.url)= item.text
