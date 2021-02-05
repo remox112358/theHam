@@ -12,9 +12,16 @@
 
   border-top: 7px solid #fff
 
+  @media screen and (max-width: $breakpoint--xl)
+    height: 275px
+
   .icon
     width: 100px
     height: 80px
+
+    @media screen and (max-width: $breakpoint--xl)
+      width: 75px
+      height: 60px
 
   &__text
     font-size: 20px
@@ -22,6 +29,9 @@
     text-transform: uppercase
 
     margin-top: 50px
+
+    @media screen and (max-width: $breakpoint--xl)
+      font-size: 16px
 
   &--dark
     color: $color--primary
