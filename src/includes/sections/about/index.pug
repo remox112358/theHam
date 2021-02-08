@@ -31,18 +31,18 @@
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum Suspendisse cursus malesuada facilisis. Nunc con sectetur odio sed dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   ]
 
-section.section.section--about
+section#about.section.section--about
   .container
     h2.section__heading About our company
     .section__inner
       .row.justify-content-center.no-gutters
         .about
           ul.tabs.tabs--about(id="tabs-about")
-            li.tab(id="tab-history", data-href="#history") Our history
-            li.tab(id="tab-biography", data-href="#biography") Our biography
-            li.tab.active(id="tab-skills", data-href="#skills") Our skills
+            li.tab(data-st-role="tab", data-st-href="#history") Our history
+            li.tab(data-st-role="tab", data-st-href="#biography") Our biography
+            li.tab.active(data-st-role="tab", data-st-href="#skills") Our skills
           .about__content
-            .area.area--history(id="history")
+            .area.area--history(id="history", data-st-role="area")
               each paragraph in history
                 p= paragraph
               .row.row--advantages.justify-content-between.mt-4
@@ -51,10 +51,10 @@ section.section.section--about
                     .advantage
                       +icon('checked')
                       span.advantage__text Excepteur sint occaecat sint.
-            .area.area--biography(id="biography")
+            .area.area--biography(id="biography", data-st-role="area")
               each paragraph in biography
                 p= paragraph
-            .area.area--skills.active(id="skills")
+            .area.area--skills.active(id="skills", data-st-role="area")
               each skill in skills
                 .skill(id=skill.id)
                   .skill__bar

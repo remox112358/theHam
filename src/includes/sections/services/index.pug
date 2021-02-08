@@ -4,16 +4,16 @@ section.section.section--services
     .section__inner
       .services
         ul.tabs.tabs--services(id="tabs-services")
-          li.tab.active(id="tab-wd", data-href="#wd") Web design
-          li.tab(id="tab-gd", data-href="#gd") Graphic design
-          li.tab(id="tab-os", data-href="#os") Online support
-          li.tab(id="tab-ad", data-href="#ad") App design
-          li.tab(id="tab-om", data-href="#om") Online marketing
-          li.tab(id="tab-ss", data-href="#ss") Seo service
+          li.tab.active(data-st-role="tab" data-st-href="#wd") Web design
+          li.tab(data-st-role="tab", data-st-href="#gd") Graphic design
+          li.tab(data-st-role="tab", data-st-href="#os") Online support
+          li.tab(data-st-role="tab", data-st-href="#ad") App design
+          li.tab(data-st-role="tab", data-st-href="#om") Online marketing
+          li.tab(data-st-role="tab", data-st-href="#ss") Seo service
         .services__content
           each areaID, index in ['wd', 'gd', 'os', 'ad', 'om', 'ss']
             - var areaClass = index === 0 ? 'active' : false;
-            .area(id=areaID, class=areaClass)
+            .area(id=areaID, class=areaClass, data-st-role="area")
               .area__thumbnail
                 img.lazy(src=placeholder, data-src="/assets/img/work.jpg", alt="Work")
               p.area__text.
