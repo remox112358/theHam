@@ -44,8 +44,9 @@
       min-width: 60px
       height: 50px
 
-    &:hover
-      background-color: darken(#fff, 5%)
+    @media screen and (min-width: $breakpoint--md)
+      &:hover
+        background-color: darken(#fff, 5%)
 
     &.active
       position: relative
