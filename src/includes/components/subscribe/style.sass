@@ -9,6 +9,11 @@
 
   background-color: #f8fcfe
 
+  @media screen and (max-width: $breakpoint--sm)
+    max-width: 300px
+
+    margin: 0 auto 20px auto
+
   &__name
     display: flex
     align-items: center
@@ -20,22 +25,31 @@
     font-weight: bold
     text-transform: uppercase
 
+    @media screen and (max-width: $breakpoint--sm)
+      height: 50px
+
+      font-size: 20px
+
   &__price
     display: flex
     align-items: flex-end
     justify-content: center
-
-    height: 100px
 
     padding: 25px 0
 
     color: #fff
     background-color: $color--darkblue
 
+    @media screen and (max-width: $breakpoint--sm)
+      padding: 15px 0
+
     span:nth-child(1)
       font-size: 40px
       font-weight: bold
       line-height: 1
+
+      @media screen and (max-width: $breakpoint--sm)
+        font-size: 32px
 
   &__details
     display: flex
@@ -62,6 +76,10 @@
     .button
       width: 170px
       height: 50px
+
+      @media screen and (max-width: $breakpoint--sm)
+        width: 140px
+        height: 40px
 
   .offer
     position: absolute
