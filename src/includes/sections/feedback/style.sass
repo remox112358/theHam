@@ -33,6 +33,9 @@
 
         transition: color $transition--button, background-color $transition--button, border-color $transition--button
 
+        @media screen and (max-width: $breakpoint--sm)
+          display: none
+
         &:hover
           color: #fff
           background-color: $color--primary
@@ -45,6 +48,9 @@
 
       .slider__dots
         margin: 0 30px
+
+        @media screen and (max-width: $breakpoint--sm)
+          margin: 0
 
         .slick-dots
           li
@@ -61,6 +67,10 @@
             box-shadow: 0px 0px 0px 5px #2b5f62
 
             transition: margin-top .3s, border .3s
+
+            @media screen and (max-width: $breakpoint--sm)
+              width: 40px
+              height: 40px
 
             &.slick-active
               border: 1px solid $color--primary

@@ -51,6 +51,8 @@ jQuery(($) => {
 
     $('#slider-feedbacks').slick({
       infinite: true,
+      autoplay: true,
+      autoplaySpeed: 10000,
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true,
