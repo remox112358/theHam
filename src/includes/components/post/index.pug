@@ -11,14 +11,14 @@ div(class=clsx)
     .post__thumbnail
       img.lazy(src=placeholder, data-src=post.thumbnail, alt=post.title)
     .post__content
-      h6.post__title= post.title
+      h5.post__title= post.title
       p.post__excerpt= post.excerpt
       date.post__date= post.date
   else
     .post__thumbnail
       img.lazy(src=placeholder, data-src=post.thumbnail, alt=post.title)
     .post__content
-      h6.post__title= post.title
+      h5.post__title= post.title
       .post__info
         span By #{post.author}
         span |

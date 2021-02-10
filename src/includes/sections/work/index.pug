@@ -1,3 +1,91 @@
+-
+  var works = [
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/gd.jpg',
+      class: 'work--gd'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/wd.jpg',
+      class: 'work--wd'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/lp.jpg',
+      class: 'work--lp'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/wp.jpg',
+      class: 'work--wp'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/gd.jpg',
+      class: 'work--gd'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/wd.jpg',
+      class: 'work--wd'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/lp.jpg',
+      class: 'work--lp'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/wp.jpg',
+      class: 'work--wp'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/gd.jpg',
+      class: 'work--gd'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/wd.jpg',
+      class: 'work--wd'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/lp.jpg',
+      class: 'work--lp'
+    },
+    {
+      title: 'Creative design',
+      subtitle: 'Web design',
+      links: ['/', '/'],
+      image: '/assets/img/works/wp.jpg',
+      class: 'work--wp'
+    }
+  ]
+
 section.section.section--work
   .container
     h2.section__heading Our amazing work
@@ -29,37 +117,13 @@ section.section.section--work
         ]
       })
       #works.works
-        each i in Array(3)
+        each work in works
           +work({
-            title: 'Creative design',
-            subtitle: 'Web design',
-            links: ['/', '/'],
-            image: '/assets/img/work.jpg',
-            class: 'work--gd'
-          })
-        each i in Array(3)
-          +work({
-            title: 'Creative design',
-            subtitle: 'Web design',
-            links: ['/', '/'],
-            image: '/assets/img/work.jpg',
-            class: 'work--wd'
-          })
-        each i in Array(3)
-          +work({
-            title: 'Creative design',
-            subtitle: 'Web design',
-            links: ['/', '/'],
-            image: '/assets/img/work.jpg',
-            class: 'work--lp'
-          })
-        each i in Array(3)
-          +work({
-            title: 'Creative design',
-            subtitle: 'Web design',
-            links: ['/', '/'],
-            image: '/assets/img/work.jpg',
-            class: 'work--wp'
+              title: work.title,
+              subtitle: work.subtitle,
+              links: work.links,
+              image: work.image,
+              class: work.class
           })
       .row.justify-content-center
         .col-auto
