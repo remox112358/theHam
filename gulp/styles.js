@@ -1,6 +1,6 @@
 import { src, dest, series } from 'gulp'
 
-import sass from 'gulp-sass'
+import sass from 'gulp-dart-sass'
 import rename from 'gulp-rename'
 import sourcemaps from 'gulp-sourcemaps'
 import autoprefixer from 'gulp-autoprefixer'

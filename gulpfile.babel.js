@@ -1,13 +1,3 @@
-/**
- * @name gulp-start
- * @description Empty project based on gulp
- * 
- * @version 1.1.0
- * 
- * @package SkyTech studio
- * @author Tatul Harutyunyan
- */
-
 import { watch, series, src,  } from 'gulp'
 
 import clean from 'gulp-clean'
