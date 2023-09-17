@@ -3,6 +3,9 @@
 
   background-color: #40474b
 
+  @media screen and (max-width: $breakpoint--md)
+    padding: 80px 0
+
   .section__inner
     display: flex
     flex-direction: column
@@ -17,6 +20,9 @@
 
       color: $color--primary
 
+      @media screen and (max-width: $breakpoint--md)
+        font-size: 28px
+
     p
       font-size: 16px
 
@@ -24,5 +30,11 @@
 
       color: #d8d8d8
 
+      @media screen and (max-width: $breakpoint--md)
+        font-size: 14px
+
     .button
       margin-top: 60px
+
+      @media screen and (max-width: $breakpoint--md)
+        margin-top: 40px

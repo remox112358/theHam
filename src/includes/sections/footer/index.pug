@@ -2,7 +2,7 @@ footer.footer
   .footer__top
     .container
       .row.row--footer
-        .col-auto.col--footer
+        .col-sm-6.col--footer
           span.footer__logo the<span>Ham</span>
           p.footer__description Lorem ipsum dolor sit amet, con is sectetur adipiscing elit. Duis ut lob ortis nulla. Vestibulum ante ipsum primis itrices posuere cubilia.
           .footer__info
@@ -19,7 +19,7 @@ footer.footer
             .item
               span.item__key Email:
               span.item__value info@canvas.com
-        .col-auto.col--footer
+        .col-sm-6.col--footer
           h6.footer__heading Recent post
           .footer__posts
             a(href="/")
@@ -48,7 +48,7 @@ footer.footer
                 date: '10 March, 2015',
                 type: 'small'
               })
-        .col-auto.col--footer
+        .col-sm-6.col--footer
           h6.footer__heading Tags
           .footer__tags
             each i in Array(4)
@@ -64,7 +64,7 @@ footer.footer
           form.newsletter(action="/", method="POST")
             input(type="text", name="newsletter_email", placeholder="Enter email" required)
             button(type="submit") Go
-        .col-auto.col--footer
+        .col-sm-6.col--footer
           h6.footer__heading Flicke feed
           .footer__feeds
             each i in Array(6)
