@@ -10,6 +10,7 @@ import taskImages from './gulp/images'
 import taskStyles from './gulp/styles'
 import taskScripts from './gulp/scripts'
 import taskVendors from './gulp/vendors'
+import taskReplace from './gulp/replace'
 
 const browser = browserSync.create()
 
@@ -19,6 +20,7 @@ export const images = taskImages(browser)
 export const styles = taskStyles(browser)
 export const scripts = taskScripts(browser)
 export const vendors = taskVendors(browser)
+export const replace = taskReplace(browser)
 
 export const cleaning = () => {
   
@@ -68,6 +70,7 @@ export const build = series(
   styles,
   vendors,
   scripts,
+  replace,
   
   next => next()
 )
