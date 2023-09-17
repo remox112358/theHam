@@ -8,6 +8,11 @@ body {
   color: #777777;
 }
 
+.svg-defs {
+  display: none;
+  overflow: hidden;
+}
+
 .section {
   padding: 80px 0;
 }
